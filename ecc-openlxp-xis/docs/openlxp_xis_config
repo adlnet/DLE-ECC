@@ -1,0 +1,138 @@
+# Configuration
+
+<details open >
+<summary><b>1. Login to the Django admin page</b></summary>
+<br/>
+On the Admin page, log in with the admin credentials defined in the .env
+</details>
+
+<details open>
+<summary><b>2. Configure Experience Index Service(XIS)</b></summary>
+</br>
+
+`Add xis configuration` : Configure Experience Index Service(XIS):
+
+`Xss host`: Host and path for the Experience Schema Service and schema api
+
+`Target schema`: Schema name or iri for target validation schema from XSS
+
+`Xse host`: Host for the Experience Search Engine
+
+`Xse index`: Index Name for the Experience Search Engine
+
+`Autocomplete field`: Path to the field to use for autocomplete in XSE
+
+`Filter field`: Path to the field to use for filtering in XSE
+</details>
+
+<details open>
+<summary><b>3. Configure Upstream XIS Syndication</b></summary>
+</br>
+
+**Note: Please make sure to upload schema file in the Experience Schema Server (XSS).**
+
+`Add xis upstream`: Configure Upstream XIS Syndication:
+
+`Xis api endpoint`: The api of the XIS Instance to retrieve data from
+
+`Xis api endpoint status`: Whether to connect to this XIS Instance for syndication
+</details>
+
+<details open>
+<summary><b>4.  Configure Upstream XIS Syndication</b></summary>
+</br>
+
+`Add filter record`: Configure Record Filter for XIS Downstream Syndication:
+
+`Field name`: The path to the field to check
+
+`Comparator`: The type of comparison to make (equal, not equal, contains)
+
+`Field value`: The value to check the field for
+</details>
+
+
+<details open>
+<summary><b>5.  Configure Metadata Filter for XIS Downstream Syndication</b></summary>
+</br>
+
+`Add filter metadata`: Configure Metadata Filter for XIS Downstream Syndication:
+
+`Field name`: The path to the field
+
+`Operation`: Whether to include or exclude the selected field
+
+</details>
+
+<details open>
+<summary><b>6.  Configure XIS Downstream Syndication</b></summary>
+</br>
+
+`Add xis downstream`: Configure XIS Downstream Syndication:
+
+`Xis api endpoint`: The api of the XIS Instance to retrieve data from
+
+`Xis api endpoint status`: Whether to connect to this XIS Instance for syndication
+
+`Filter records`: The filter record objects to use when filtering records to send to this XIS
+
+`Filter metadata`: The filter metadata objects to use when filtering metadata to send to this XIS
+</details>
+
+<details open>
+<summary><b>7.  Configure XIS Downstream Syndication</b></summary>
+</br>
+
+`Add sender email configuration` : Configure the sender email address from which conformance alerts are sent.
+
+</details>
+<details open>
+<summary><b>8.  Configure XIS Downstream Syndication</b></summary>
+</br>
+
+`Add receiver email configuration` : 
+Add an email list to send conformance alerts. When the email gets added, an email verification email will get sent out. In addition, conformance alerts will get sent to only verified email IDs.
+
+</details>
+<details open>
+<summary><b>9.  Configure XIS Downstream Syndication</b></summary>
+</br>
+
+`Add email configuration` : To create customized email notifications content.
+    
+`Subject`:  Add the subject line for the email. The default subject line is "OpenLXP Conformance Alerts."
+
+`Email Content`: Add the email content here. The  Email Content is an optional field. 	
+    Note: When the log type is Message, Message goes in this field. 
+
+`Signature`: Add Signature here.
+
+`Email Us`: Add contact us email address here.
+
+`FAQ URL`: Add FAQ URL here.
+
+`Unsubscribe Email ID`: Add email ID to which Unsubscriber will send the emails.
+
+`Logs Type`: Choose how logs will get sent to the Owners/Managers. Logs can be sent in two ways Attachment or Message.
+
+For Experience Index Agents, and Experience Index Services, choose Attachment as a log type.
+
+For Experience Management Service and Experience discovery services, choose Message as a log type. 
+
+`HTML File` : Upload the HTML file here, this HTML file helps to beautify the email body.
+
+Please take the reference HTML file from the below path.
+
+https://github.com/OpenLXP/openlxp-notifications/blob/main/Email_Body.html
+
+In the above reference HTML file, feel free to add your HTML design for the email body.
+
+    Note: Do not change the variables below as they display specific components in the email body.
+
+    <p>{paragraph:}</p>
+    {signature:}
+    <a href="mailto: {email_us:}">
+    <a href="{faq_url:}" >
+    <a href="mailto: {unsubscribe:}">
+</details>
+

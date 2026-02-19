@@ -1,0 +1,57 @@
+bcaab3e | cscholer591 | 2026-02-06 | dockerfile edit
+1500c24 | cscholer591 | 2026-02-06 | custom image replaced with ironbank image
+0b46ee8 | cscholer591 | 2026-01-22 | pandas upgrade also
+725235c | cscholer591 | 2026-01-22 | numpy upgrade for new image
+a74c3e6 | Callista Scholer | 2025-12-16 | Merge branch 'callie-dev' into 'master'
+2cd95d6 | cscholer591 | 2025-12-10 | django version again
+408d7ca | cscholer591 | 2025-12-10 | new django version
+c19da3f | cscholer591 | 2025-12-10 | django upgrade
+4dd9263 | cscholer591 | 2025-11-25 | taking out urllib3
+abbbe86 | cscholer591 | 2025-11-25 | urllib 3 version
+8dfcf2a | cscholer591 | 2025-11-24 | mysql connector python upgraded too
+756b5ce | cscholer591 | 2025-11-24 | django upgraded to 4.2.26
+81a4e16 | cscholer591 | 2025-10-07 | django update for twistlock
+909a760 | Simeranjeet Sandhu | 2025-09-17 | Merge branch 'python313' into 'master'
+5fe0e0b | Simeranjeet Sandhu | 2025-09-11 | python upgraded to 313
+1386c93 | Simeranjeet Sandhu | 2025-08-12 | Upgraded setuptools and Pillow
+e4a5985 | Simeranjeet Sandhu | 2025-06-30 | Removing boto3/botocore
+2cf4d9b | Simeranjeet Sandhu | 2025-06-30 | Upgraded Django/requests
+e92276c | kjijo | 2025-04-11 | setting ssl redirect
+eac514b | kjijo | 2025-04-11 | http to https redirect check
+0a52e5c | kjijo | 2025-04-10 | testing connection
+d391811 | kjijo | 2025-04-10 | Update packages
+5073d4c | kjijo | 2025-04-10 | Updating gunicorn and django
+9d2c26c | kjijo | 2025-04-10 | Edit to settings
+6b80c7c | Simeranjeet Sandhu | 2025-02-27 | Added package.json for Cypress
+d0284eb | Simeranjeet Sandhu | 2025-02-27 | Adding cypress/CSP headers
+2c20a05 | Simeranjeet Sandhu | 2025-02-27 | Adding p1 auth
+4a70d9f | Simeranjeet Sandhu | 2025-02-27 | Fixing static/media path
+a74669c | Simeranjeet Sandhu | 2025-02-24 | Adding FORCE_SCRIPT_NAME
+4794bac | Simeranjeet Sandhu | 2025-02-24 | Fixing p1_notifications
+9d76933 | Simeranjeet Sandhu | 2025-02-19 | Removing unnecessary test files
+cf4ccb8 | Simeranjeet Sandhu | 2025-02-19 | Modified Dockerfile
+02c4676 | Simeranjeet Sandhu | 2025-02-19 | Dockerfile: adding COPY --chown=python:python . .
+b1fc98c | Simeranjeet Sandhu | 2025-02-12 | Added bleach
+1edb93b | Simeranjeet Sandhu | 2025-02-12 | Updating start up scripts
+e3bcdb6 | kjijo | 2025-02-06 | SQ corrections
+2acfe9c | kjijo | 2025-02-06 | Fixing SQ
+50a2a7d | Karen Jijo | 2025-02-03 | Update test_views_unit.py
+e7d8a00 | Karen Jijo | 2025-02-03 | Update test_views_unit.py
+124e630 | Karen Jijo | 2025-02-03 | Update test_views_unit.py -TestSetUp
+5c38617 | Simeranjeet Sandhu | 2025-02-03 | Added confusable_homoglyphs
+af540d9 | Simeranjeet Sandhu | 2025-02-03 | Updated LOG_PATH in settings.py
+e042a25 | Simeranjeet Sandhu | 2025-01-30 | Merge branch 'ci-fixes' into 'master'
+1123632 | Simeranjeet Sandhu | 2025-01-30 | Added SECURE_SSL_REDIRECT to settings.py
+fb2890a | Simeranjeet Sandhu | 2025-01-30 | Fortify findings
+58971ae | Simeranjeet Sandhu | 2025-01-29 | Merge branch 'p1-ci-fixes' into 'master'
+dfe3a6d | kjijo | 2025-01-22 | remove init
+b103fdc | kjijo | 2025-01-22 | setting default token
+c789bb7 | kjijo | 2025-01-22 | XSR_token
+1587738 | Karen Jijo | 2025-01-22 | Update 0002_xsrconfiguration_token.py
+bc892dc | Simeranjeet Sandhu | 2025-01-21 | Twistlock: Removing unnecessary files
+c9ba7f8 | Simeranjeet Sandhu | 2025-01-21 | Upgraded Celery
+6a44563 | Simeranjeet Sandhu | 2025-01-21 | Upgrading packages for Anchore/Twistlock
+bdc0ef6 | Simeranjeet Sandhu | 2025-01-21 | Fixing syntax errors in .pylintrc
+7fa7a7d | Simeranjeet Sandhu | 2025-01-21 | Added .pylintrc/LICENSE
+ed6df42 | Simeranjeet Sandhu | 2025-01-21 | Adding .pylintrc file
+7a4c581 | Simeranjeet Sandhu | 2024-12-10 | Initial code push

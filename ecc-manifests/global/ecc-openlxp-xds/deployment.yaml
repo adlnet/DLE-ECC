@@ -1,0 +1,75 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-openlxp-xds
+spec:
+  revisionHistoryLimit: 1
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      securityContext:
+        fsGroup: 1001
+      terminationGracePeriodSeconds: 15
+      imagePullSecrets:
+      - name: code-il2-pull-creds
+      containers:
+      - name: ecc-openlxp-xds
+        image: ecc/ecc-openlxp-xds
+        volumeMounts:
+          - mountPath: "/tmp/shared/"
+            name: xds-storage-mount
+        command:
+        - "/bin/sh"
+        - "-exc"
+        - |
+          sed -i 's/hashlib.md5()/hashlib.md5(usedforsecurity=False)/g' /tmp/app/.cache/python-packages/django/db/backends/utils.py
+          ../start-app.sh
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: app-vars
+        - secretRef:
+            name: mysql-connect-info
+        - secretRef:
+            name: xds-secrets
+        env:
+        - name: FORCE_SCRIPT_NAME
+          value: "/ecc-openlxp-xds"
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: mysql-connect-info
+              key: MYSQL_HOST
+        - name: DB_NAME
+          valueFrom:
+            configMapKeyRef:
+              name: app-name
+              key: MYSQL_DB_NAME
+        - name: DB_USER
+          valueFrom:
+            configMapKeyRef:
+              name: app-name
+              key: MYSQL_DB_ADMIN_USER
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD
+      - name: xds-nginx
+        image: nginx/nginx
+        ports:
+          - containerPort: 8080
+            name: xds-nginx-port
+        volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: xds-storage-mount
+          - mountPath: /etc/nginx/conf.d/
+            name: nginx-default
+      volumes:
+        - name: xds-storage-mount
+          persistentVolumeClaim:
+            claimName: xds-storage-claim
+        - name: nginx-default
+          configMap:
+            name: nginx-default-config

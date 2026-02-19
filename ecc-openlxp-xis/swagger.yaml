@@ -1,0 +1,199 @@
+openapi: 3.0.0
+info:
+  title: Swagger Experience Index Service APIs
+  version: 1.0.0
+  description: APIs For Access To OpenLXP Experience Index Service Information
+  contact:
+    email: "openlxphost@gmail.com"
+  license:
+    name: "Apache License, Version 2.0"
+    url: "http://www.apache.org/licenses/LICENSE-2.0"
+servers:
+  - url: http://localhost:8080/api/
+    variables: {}
+    description: XIS LocalHost
+paths:
+  /metadata/:
+    summary: API to get records based on UUID
+    description: 'XIS API'
+    get:
+      summary: Get Record Based On Unique Record Identifier
+      description: Get Record Based On Unique Record Identifier
+      tags:
+      - "Metadata"
+      parameters:
+        - in: query
+          name: id
+          description: "Enter Unique ID To Fetch Metadata Record"
+          schema:
+            type: string
+        - in: query
+          name: provider
+          description: "Enter Provider Name To Fetch Related Metadata Records"
+          schema:
+            type: string
+        - in: query
+          name: metadata_key_hash_list
+          description: "Enter Comma Seperated String of Metadata Key Hash To Fetch Related Metadata Records"
+          schema:
+            type: string
+      responses:
+        '200':    # status code
+          description: A JSON Array Of Metadata Record/Records
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':    # status code
+          description: Bad Request Sent
+        '500':    # status code
+          description: Internal Server Error
+          
+    post:
+      tags:
+      - "Metadata"
+      summary: "Add New Metadata Record"
+      description: "Add New Metadata Record"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+      responses:
+        '201':
+          description: "New Meadata Record Created"        
+        '400':    # status code
+          description: Bad Request Sent
+          
+  /metadata/{id}/:
+    summary: "Enter Unique ID To Fetch Metadata Record"
+    description: "Enter Unique ID To Fetch Metadata Record"
+    get:
+      summary: "Enter Unique ID To Fetch Metadata Record"
+      description: Enter Unique ID To Fetch Metadata Record
+      tags:
+      - "Metadata"
+      parameters:
+        - in: path
+          name: id
+          description: "Enter Unique ID To Fetch Metadata Record"
+          schema:
+            type: string
+          required: true
+      responses:
+        '200':    # status code
+          description: A JSON Array Of Metadata Record/Records
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '500':    # status code
+          description: Internal Server Error       
+  
+    patch:
+      tags:
+      - "Metadata"
+      summary: "Update/Edit Existing Metadata Record"
+      description: "Update/Edit Existing Metadata Record"
+      parameters:
+        - in: path
+          name: id
+          description: "Enter Unique ID To Fetch Metadata Record"
+          schema:
+            type: string
+          required: true
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+      responses:
+        '200':
+          description: "JSON Array of Updated Metadata Record"
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '500':    # status code
+          description: Internal Server Error
+          
+  /supplemental-data/:
+    summary: Add New Supplemental Metadata Record
+    description: ' XIS api'
+    post:
+      tags:
+      - "Supplemental Metadata"
+      summary: "Add New Supplemental Metadata Record"
+      description: "Add New Supplemental Metadata Record"
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                username:
+                  type: string
+      responses:
+        '201':
+          description: "New Supplemental Record Created"        
+        '400':    # status code
+          description: Bad Request Sent
+          
+  /catalogs/:
+    summary: API to get catelogs list
+    description: ' Catalogs list'
+    get:
+      summary: Get A List Of Record Of Specified Catalogs
+      description: Get A List Of Record Of Specified Catalogs
+      tags:
+      - "Catalogs"
+      responses:
+        '200':    # status code
+          description: A JSON Array Of Catalogs Of Specified Provider
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':    # status code
+          description: Bad Request Sent
+        '500':    # status code
+          description: Internal Server Error
+  
+  /xis-workflow/:
+    summary: API to run ETL pipeline in XIS
+    description: ' XIS api'
+    get:
+      summary: Run XIS Workflow
+      description: Run XIS Workflow
+      tags:
+      - "XIS Workflow"
+      responses:
+        '200':    # status code
+          description: A JSON Array Of Task ID
+          content:
+            application/json:
+              schema: 
+                type: array
+                items: 
+                  type: string
+        '400':    # status code
+          description: Bad Request Sent
+        '500':    # status code
+          description: Internal Server Error        

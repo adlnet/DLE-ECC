@@ -1,0 +1,30 @@
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization
+
+commonLabels:
+  authentication: istio-auth
+
+resources:
+  - ecc-openlxp-xia-jko
+  - ecc-openlxp-xis
+  - ecc-openlxp-xms
+  - ecc-openlxp-xms-ui
+  - ecc-openlxp-xds-ui
+  - ecc-openlxp-xia-aetc
+  - ecc-openlxp-xia-edx
+  - ecc-openlxp-xia-dau
+  - ecc-openlxp-xds
+  - ecc-openlxp-xss
+  - ecc-openlxp-xia-moodle
+  - ecc-openlxp-xia-coursera
+  - ecc-openlxp-xia-jobs
+  - elasticsearch
+
+patches:
+  - path: patches/deployment-defaults.yaml
+    target:
+      kind: Deployment
+  - path: patches/deployment-defaults.yaml
+    target:
+      kind: StatefulSet
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               

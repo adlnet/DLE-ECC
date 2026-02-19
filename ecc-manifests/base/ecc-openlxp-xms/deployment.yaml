@@ -1,0 +1,114 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-openlxp-xms
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      securityContext:
+        fsGroup: 1001
+      terminationGracePeriodSeconds: 15
+      imagePullSecrets:
+      - name: code-il2-pull-creds
+      containers:
+      - name: ecc-openlxp-xms
+        image: ecc/ecc-openlxp-xms
+        volumeMounts:
+          - mountPath: "/tmp/shared/"
+            name: xms-storage-mount
+        command:
+        - "/bin/sh"
+        - "-exc"
+        - |
+          sed -i 's/hashlib.md5()/hashlib.md5(usedforsecurity=False)/g' /tmp/app/.cache/python-packages/django/db/backends/utils.py
+          ../start-app.sh
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: app-vars
+        - secretRef:
+            name: mysql-connect-info
+        - secretRef:
+            name: xds-secrets
+        - configMapRef:
+            name: cluster-prefix
+        env:
+        - name: FORCE_SCRIPT_NAME
+          value: "/xms"
+        - name: MEDIA_PATH
+          value: "/tmp/shared/media"
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: mysql-connect-info
+              key: MYSQL_HOST
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_3
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_3
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_3
+        - name: MYSQL_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_3
+        - name: MYSQL_DB_ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_3
+        - name: MYSQL_DB_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_3
+        - name: MYSQL_DB_RW_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_USER_3
+        - name: MYSQL_DB_RW_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_PASSWORD_3
+        - name: MYSQL_DB_RO_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_USER_3
+        - name: MYSQL_DB_RO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_PASSWORD_3
+      - name: xms-nginx
+        image: nginx/nginx
+        ports: 
+          - containerPort: 8080
+            name: xms-nginx-port
+        volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: xms-storage-mount
+          - mountPath: /etc/nginx/conf.d/
+            name: nginx-default
+      volumes:
+        - name: xms-storage-mount
+          persistentVolumeClaim:
+            claimName: xms-storage-claim
+        - name: nginx-default
+          configMap:
+            name: xms-nginx-default-config
+

@@ -1,0 +1,13 @@
+[
+{
+    "model": "openlxp_P1_notification.email",
+    "pk": 1,
+    "fields": {
+        "sender": null,
+        "reference": "Subscribed_list_update",
+        "subject": 1,
+        "template_type": 4,
+        "recipients": []
+    }
+}
+]

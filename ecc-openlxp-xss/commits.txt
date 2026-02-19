@@ -1,0 +1,211 @@
+055322d | cscholer591 | 2026-02-06 | custom image replaced with ironbank image
+2e435c6 | Simeranjeet Sandhu | 2025-09-05 | Upgraded python to 3.13
+ac29eec | Simeranjeet Sandhu | 2025-08-12 | Updated packages
+8e837c5 | kjijo | 2025-08-11 | Removing Learning_type from XSS
+e9b19e4 | kjijo | 2025-07-14 | updating migrations
+f80801e | kjijo | 2025-07-14 | update models
+e0683d2 | kjijo | 2025-07-14 | adding comment
+7557e2d | kjijo | 2025-07-14 | clamd correction
+676a360 | kjijo | 2025-07-14 | fixing clamd
+8fe0d7d | kjijo | 2025-07-14 | clamd correction
+15c7715 | kjijo | 2025-07-13 | Less variables
+badf851 | kjijo | 2025-07-13 | added validation to XSS for multiple and type
+be79f16 | Simeranjeet Sandhu | 2024-12-16 | Upgrading Django to 4.2.17
+9ad712d | Simeranjeet Sandhu | 2024-12-11 | Removing SECURE_SSL_REDIRECT
+0c81693 | Karen Jijo | 2024-12-04 | Update models.py istartswith
+118e36a | Karen Jijo | 2024-12-04 | Update admin.py istartswith
+d965401 | Karen Jijo | 2024-12-04 | Update views.py update-iexact
+b86027a | Karen Jijo | 2024-12-03 | Update views.py -name__iexact
+ce55c3f | Karen Jijo | 2024-12-03 | Update settings.py - database update
+43f97db | Simeranjeet Sandhu | 2024-11-21 | SQ: remove commented code
+9e68bd5 | James Tobin | 2024-10-28 | Update requirements.txt
+9176962 | Simeranjeet Sandhu | 2024-10-22 | Removing CSRF
+e17731e | Karen Jijo | 2024-10-22 | Update models.py - sonar duplication
+72b95a3 | Karen Jijo | 2024-10-22 | Update models.py clamd
+20ef3e5 | Simeranjeet Sandhu | 2024-10-21 | Updating xss code from github
+9aa5d1f | Simeranjeet Sandhu | 2024-10-21 | updating start-app.sh
+52526aa | Simeranjeet Sandhu | 2024-10-17 | Adding migrations
+e92796b | Simeranjeet Sandhu | 2024-10-17 | Updating CSP headers
+370201a | Simeranjeet Sandhu | 2024-10-17 | Updating static/
+9def5cb | Simeranjeet Sandhu | 2024-10-17 | csp headers to include sha vars
+b771233 | Simeranjeet Sandhu | 2024-10-15 | Updating Django UI
+1860b67 | Simeranjeet Sandhu | 2024-09-26 | Fixing clamav unit tests
+078d31b | Simeranjeet Sandhu | 2024-09-26 | Updating clamav in unit tests
+eb5e14c | Simeranjeet Sandhu | 2024-09-26 | Fixing fortify
+41e7363 | Simeranjeet Sandhu | 2024-09-26 | Updating clamav to P1 service
+a835d0b | Simeranjeet Sandhu | 2024-09-24 | Updated README
+20e6191 | Simeranjeet Sandhu | 2024-09-24 | Updated README
+13eb209 | Simeranjeet Sandhu | 2024-09-18 | DEBUG enabled to troubleshoot CSRF
+1bb3a43 | Simeranjeet Sandhu | 2024-09-17 | Reverted CSRF hardcoded values
+baa3392 | Simeranjeet Sandhu | 2024-09-17 | Hardcoding CSRF vars to debug
+3e01e31 | Simeranjeet Sandhu | 2024-09-17 | Updated CSRF_TRUSTED_ORIGINS
+4966ac6 | Jon Smith | 2024-08-20 | P1MDOHD-23732: update to latest base image
+766cbf7 | Simeranjeet Sandhu | 2024-08-13 | Django upgraded to 4.2.15
+8ed83cb | Simeranjeet Sandhu | 2024-07-24 | Upgraded Django
+b0a5671 | Simeranjeet Sandhu | 2024-06-20 | Merge branch 'xss-update' into 'master'
+fd6ba22 | ssandhu | 2024-06-20 | Fixed p1 authentication issue
+e73f021 | ssandhu | 2024-06-18 | Updated gunicorn
+81f6e85 | James Tobin | 2024-06-13 | add auth session middleware
+e1751dc | Simeranjeet Sandhu | 2024-06-13 | Merge branch 'xss-update' into 'master'
+84f1f25 | Simeranjeet Sandhu | 2024-06-12 | updated requests package
+b261e9b | Simeranjeet Sandhu | 2024-06-12 | added requirements.txt to commit
+4f0a6ae | Simeranjeet Sandhu | 2024-06-12 | Updated p1-auth/added skip-checks to start-app
+7732c7a | Simeranjeet Sandhu | 2024-06-11 | Merge branch 'xss-update' into 'master'
+e9a2a96 | Simeranjeet Sandhu | 2024-06-11 | user changed to python in start up script
+6c12b74 | Simeranjeet Sandhu | 2024-06-11 | Merge branch 'xss-update' into 'master'
+8787112 | Simeranjeet Sandhu | 2024-06-11 | updated permissions for Dockerfile copy command
+2782674 | Simeranjeet Sandhu | 2024-06-11 | Merge branch 'xss-update' into 'master'
+790778b | Simeranjeet Sandhu | 2024-06-11 | Updated base image
+e2a33ba | Simeranjeet Sandhu | 2024-06-04 | Merge branch 'xss-update' into 'master'
+4cb09f4 | Simeranjeet Sandhu | 2024-06-04 | upgraded requests package
+b0aae23 | James Tobin | 2024-06-03 | Merge branch 'swap-auth' into 'master'
+b9f505e | JDTobin | 2024-06-03 | swap authentication backend
+4861f04 | Simeranjeet Sandhu | 2024-01-19 | Merge branch 'cypress-tests' into 'master'
+9743fbf | Simeranjeet Sandhu | 2024-01-19 | Added cypress tests
+27e70a6 | Simeranjeet Sandhu | 2024-01-09 | Merge branch 'mdo/test' into 'master'
+2f364a4 | Jon Smith | 2024-01-05 | P1MDOHD-19775: update to latest custom base image
+9038a4a | Simeranjeet Sandhu | 2023-11-20 | Merge branch 'mdo/test' into 'master'
+3bb721a | Jon Smith | 2023-11-16 | P1MDOHD-18873: update to latest base image
+02291bb | Simeranjeet Sandhu | 2023-11-13 | Merge branch 'p1-update' into 'master'
+892064a | Simeranjeet Sandhu | 2023-11-13 | Removed unnecessary files for twistlock
+dc8f396 | Simeranjeet Sandhu | 2023-11-13 | Merge branch 'p1-update' into 'master'
+eeec6d2 | Simeranjeet Sandhu | 2023-11-13 | Upgraded Django
+406b311 | James Tobin | 2023-09-13 | Merge branch 'p1-tests' into 'master'
+56be137 | JDTobin | 2023-09-13 | fix log formatting fix log testing
+1289c2a | JDTobin | 2023-09-13 | reduce vars
+b6cd7c5 | James Tobin | 2023-09-13 | Merge branch 'p1-tests' into 'master'
+2c12dec | JDTobin | 2023-09-13 | mock magic and fs
+7891b7e | JDTobin | 2023-09-13 | fix string formatting
+7c85044 | James Tobin | 2023-09-13 | Merge branch 'p1-tests' into 'master'
+92d89b5 | JDTobin | 2023-09-13 | add tests (#29)
+4a454a3 | Simeranjeet Sandhu | 2023-09-12 | Merge branch 'p1-update' into 'master'
+7430f26 | Simeranjeet Sandhu | 2023-09-12 | Fixed Lint
+6421bf6 | Simeranjeet Sandhu | 2023-09-12 | Fixed Lint
+5fb60ea | James Tobin | 2023-09-11 | remove call to start clam service
+1060185 | James Tobin | 2023-09-11 | remove update to clamdb
+6551ed5 | James Tobin | 2023-09-11 | Merge branch 'p1-magic' into 'master'
+e5293c4 | JDTobin | 2023-09-11 | Add-magic (#28)
+ed0d450 | Karen Jijo | 2023-09-07 | Merge branch 'bleach_update' into 'master'
+fae33ff | Simeranjeet Sandhu | 2023-09-07 | Merge branch 'p1-update' into 'master'
+fdd16dd | Simeranjeet Sandhu | 2023-09-07 | upgraded django version
+a251adb | Karen Jijo | 2023-09-07 | fixed regex
+2f4ee2f | Karen Jijo | 2023-09-07 | regex check
+9d2ff49 | Karen Jijo | 2023-09-07 | fixed bleach
+ea27d8f | Karen Jijo | 2023-09-06 | Update 3 files
+57535e5 | James Tobin | 2023-09-05 | Merge branch 'fix-dockerfile' into 'master'
+3e55ada | JDTobin | 2023-09-05 | re-order dockerfile
+ea222a7 | James Tobin | 2023-09-05 | Merge branch 'p1-add-av' into 'master'
+8d971a1 | JDTobin | 2023-09-05 | add virus scanning scans files when uploaded
+e60b5a6 | JDTobin | 2023-09-05 | add clamav and clamd
+c6a2f5e | Karen Jijo | 2023-08-28 | Merge branch 'rgx_check' into 'master'
+cc25214 | Karen Jijo | 2023-08-28 | Update 2 files
+e76b830 | James Tobin | 2023-08-21 | Merge branch 'add-auth' into 'master'
+587eee9 | JDTobin | 2023-08-21 | add SSO auth
+93000e3 | Karen Jijo | 2023-08-16 | Merge branch 'settings_update' into 'master'
+cdf5704 | Karen Jijo | 2023-08-14 | Adding CORS and CSRF
+1b2804d | Simeranjeet Sandhu | 2023-08-11 | Merge branch 'p1-update' into 'master'
+d7b6468 | Simeranjeet Sandhu | 2023-08-11 | T331 - added CSP middleware
+f4ba12a | Simeranjeet Sandhu | 2023-08-11 | Merge branch 'p1-update' into 'master'
+5154078 | Simeranjeet Sandhu | 2023-08-11 | T331 - adding CSP headers
+74c9d06 | James Tobin | 2023-08-10 | Merge branch 't21' into 'master'
+2075f14 | JDTobin | 2023-08-10 | require ssl
+aae2ae4 | Simeranjeet Sandhu | 2023-08-09 | Merge branch 'p1-update' into 'master'
+8d17301 | Simeranjeet Sandhu | 2023-08-09 | SD Elements T599 - HOSTS
+6954c69 | Simeranjeet Sandhu | 2023-07-27 | Merge branch 'p1-update' into 'master'
+02943e8 | Simeranjeet Sandhu | 2023-07-27 | updated requests package version
+1ae7015 | Simeranjeet Sandhu | 2023-07-27 | Merge branch 'p1-update' into 'master'
+0263522 | Simeranjeet Sandhu | 2023-07-27 | updated python to 3.9.17
+b15d272 | James Tobin | 2023-05-04 | Merge branch 'update-db' into 'master'
+eb59bab | JDTobin | 2023-05-04 | update db package
+6dbda26 | Michael Son | 2023-03-14 | Merge branch 'update_deps' into 'master'
+3815bb8 | JDTobin | 2023-03-14 | update django-mysql package
+6a5ae6b | Simeranjeet Sandhu | 2022-08-30 | Merge branch 'xss-code-update' into 'master'
+1bf1164 | ssandhu | 2022-08-30 | Updates made for ArgoCD
+c911627 | Simeranjeet Sandhu | 2022-08-05 | Merge branch 'xss-code-update' into 'master'
+0a19ee6 | ssandhu | 2022-08-05 | Updated Dockerfile
+eba9dea | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xss-code-update' into 'master'
+0ab7cc7 | ssandhu | 2022-08-04 | Sonar Fixes
+90ac9b4 | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xss-code-update' into 'master'
+58c80ba | ssandhu | 2022-08-04 | lint fixed
+63c78ca | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xss-code-update' into 'master'
+12fe53b | ssandhu | 2022-08-04 | Fixed Sonar findings
+516013e | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xss-code-update' into 'master'
+47093cf | ssandhu | 2022-08-03 | removed s3fs
+15c81fa | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xss-code-update' into 'master'
+db4fac9 | ssandhu | 2022-08-02 | updated .pylintrc
+561f6b7 | Simeranjeet Sandhu | 2022-08-02 | Merge branch 'xss-code-update' into 'master'
+b995096 | ssandhu | 2022-08-02 | updated .pylintrc
+ee8353c | Simeranjeet Sandhu | 2022-08-01 | Merge branch 'xss-code-update' into 'master'
+952f227 | ssandhu | 2022-08-01 | updated .pylintrc
+5b3543d | Simeranjeet Sandhu | 2022-07-29 | Merge branch 'xss-code-update' into 'master'
+51fc8b1 | ssandhu | 2022-07-29 | xss code update
+4d8db7a | Simeranjeet Sandhu | 2022-05-11 | Merge branch 'xss-code-update' into 'master'
+dfb5260 | ssandhu | 2022-05-11 | trufflehog/sonarqube issues fixed
+0351027 | ssandhu | 2022-05-11 | Sonarqube issues resolved
+5ac1a52 | Simeranjeet Sandhu | 2022-05-11 | Merge branch 'xss-code-update' into 'master'
+88dd8a8 | ssandhu | 2022-05-11 | Sonarqube issues resolved
+cf23ab9 | Simeranjeet Sandhu | 2022-05-11 | Merge branch 'xss-code-update' into 'master'
+78b4015 | ssandhu | 2022-05-10 | Updated code
+5d554aa | Simeranjeet Sandhu | 2022-05-10 | Merge branch 'xss-code-update' into 'master'
+3c983d7 | ssandhu | 2022-05-10 | Django Unit test fixed
+4a7f24c | Simeranjeet Sandhu | 2022-05-10 | Merge branch 'xss-code-update' into 'master'
+3f9c4ee | ssandhu | 2022-05-10 | updated .pylintrc
+6c9a2d6 | Simeranjeet Sandhu | 2022-05-10 | Merge branch 'xss-code-update' into 'master'
+83be9b4 | ssandhu | 2022-05-10 | updated .pylint.rc
+8ba17b9 | Simeranjeet Sandhu | 2022-05-10 | Merge branch 'xss-code-update' into 'master'
+b8ebfcc | ssandhu | 2022-05-10 | Sonarqube issues fixed
+91c0a56 | Simeranjeet Sandhu | 2022-05-02 | Merge branch 'xss-code-update' into 'master'
+77ad613 | ssandhu | 2022-05-02 | Sonarqube findings resolved
+6bdb411 | Simeranjeet Sandhu | 2022-04-28 | Merge branch 'xss-code-update' into 'master'
+e8233d1 | ssandhu | 2022-04-28 | trufflehog findings resolved
+8c31780 | Simeranjeet Sandhu | 2022-04-28 | Merge branch 'xss-code-update' into 'master'
+e4d47fe | ssandhu | 2022-04-28 | Lint issues resolved
+78f9790 | Simeranjeet Sandhu | 2022-04-28 | Merge branch 'xss-code-update' into 'master'
+e753df9 | ssandhu | 2022-04-28 | xss code update
+c7484a0 | Simeranjeet Sandhu | 2022-04-20 | Merge branch 'xss-code-update' into 'master'
+5db24d0 | ssandhu | 2022-04-19 | updated .pylintrc
+01e8f87 | Simeranjeet Sandhu | 2022-04-19 | Merge branch 'xss-code-update' into 'master'
+45b3d96 | ssandhu | 2022-04-19 | Code updated to meet Lint/Unit Tests
+ffa5d65 | Simeranjeet Sandhu | 2022-04-19 | Merge branch 'xss-code-update' into 'master'
+8819b48 | ssandhu | 2022-04-19 | xss code update
+6c647f2 | Simeranjeet Sandhu | 2022-04-19 | Merge branch 'xss-code-update' into 'master'
+89e87de | ssandhu | 2022-04-19 | added .coveragerc
+12a7ac6 | Simeranjeet Sandhu | 2022-04-12 | Merge branch 'xss-code-update' into 'master'
+1e0fe54 | ssandhu | 2022-04-12 | trufflehog finding resolved
+b5265e4 | Simeranjeet Sandhu | 2022-04-12 | Merge branch 'xss-code-update' into 'master'
+c706b5d | ssandhu | 2022-04-12 | modified settings.py
+f672bf2 | Simeranjeet Sandhu | 2022-04-12 | Merge branch 'xss-code-update' into 'master'
+43b73a2 | ssandhu | 2022-04-12 | updated urls.py
+9d5a9e8 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xss-code-update' into 'master'
+46022c5 | ssandhu | 2022-04-08 | code updated
+4867c88 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xss-code-update' into 'master'
+592acba | ssandhu | 2022-04-08 | Fixed SSL connection error
+da18175 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xss-code-update' into 'master'
+eedd15c | ssandhu | 2022-04-08 | updated app/openlxp_xss_project/settings.py
+2e1c8e3 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xss-code-update' into 'master'
+46ad762 | ssandhu | 2022-04-01 | updated .pylintrc
+5949123 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xss-code-update' into 'master'
+6a2f298 | ssandhu | 2022-04-01 | updated .pylintrc
+f7a4b2e | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xss-code-update' into 'master'
+890a565 | ssandhu | 2022-04-01 | openlxp-xss code updated to meet Lint requirements
+3544538 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xss-code-update' into 'master'
+ba128be | ssandhu | 2022-04-01 | openlxp-xss code updated to meet Lint requirements
+ba6bc7d | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xss-code-update' into 'master'
+c1738a6 | ssandhu | 2022-04-01 | openlxp-xss code updated to meet Lint requirements
+7a6d2a7 | Simeranjeet Sandhu | 2022-03-18 | Merge branch 'xss-code-update' into 'master'
+c383c6a | ssandhu | 2022-03-18 | Updated requirements.txt
+020d076 | Simeranjeet Sandhu | 2022-03-18 | Merge branch 'xss-code-update' into 'master'
+119238f | ssandhu | 2022-03-18 | Updated Dockerfile
+21a7943 | ssandhu | 2022-02-25 | code updated from openlxp github
+4823e65 | Michael Son | 2022-02-15 | Merge branch 'ssandhu-master-patch-12188' into 'master'
+f43b6c8 | Simeranjeet Sandhu | 2022-02-15 | Update requirements.txt. mysqlclient updated to mysql-connector-python
+585f789 | Michael Son | 2022-02-01 | Merge branch 'ssandhu' into 'master'
+075cb3f | Simeranjeet Sandhu | 2022-02-01 | Update Dockerfile
+5508e20 | Michael Son | 2022-01-27 | Update Dockerfile
+a923159 | Michael Son | 2021-12-13 | Update Dockerfile
+970cbae | Michael Son | 2021-11-03 | initial commit
+91c311a | jdiouf | 2021-08-02 | added relationship between schemas and mappings + constraints on schemas (#4)
+ae81e4f | jdiouf | 2021-06-21 | added models for adding schemas and schema mappings; created api app … (#3)
+39e3c24 | jdiouf | 2021-05-14 | Django config + Initial SchemaLedger model (#2)
+a4d79a5 | Matt Drayer | 2020-12-15 | Create LICENSE.txt (#1)
+4220959 | Mike Son | 2020-11-30 | Initial commit

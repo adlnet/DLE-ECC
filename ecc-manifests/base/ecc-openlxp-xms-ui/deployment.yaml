@@ -1,0 +1,18 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-openlxp-xms-ui
+spec:
+  template:
+    spec:
+      containers:
+      - name: ecc-openlxp-xms-ui
+        image: ecc/ecc-openlxp-xms-ui
+        imagePullPolicy: Always
+        resources:
+          limits:
+            memory: 512Mi
+        env:
+          
+
+      

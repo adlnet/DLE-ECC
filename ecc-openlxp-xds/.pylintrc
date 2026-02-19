@@ -1,0 +1,69 @@
+[DESIGN]
+max-attributes=29
+
+[TYPECHECK]
+
+[MASTER]
+DJANGO_SETTINGS_MODULE=openlxp_xds_project.settings
+
+disable=unused-argument,
+        useless-super-delegation,
+        invalid-name,
+        duplicate-code,
+        unused-variable,
+        broad-except,
+        no-else-raise,
+        no-else-return,
+        arguments-renamed,
+        no-self-use,
+        useless-object-inheritance,
+        redefined-builtin,
+        too-many-ancestors,
+        too-many-public-methods,
+        too-few-public-methods,
+        too-many-return-statements,
+        useless-return,
+        consider-using-in,
+        no-name-in-module,
+        abstract-method,
+        assignment-from-no-return,
+        expression-not-assigned,
+        too-many-locals,
+        import-error,
+        super-with-arguments,
+        superfluous-parens,
+        dangerous-default-value,
+        missing-module-docstring,
+        missing-class-docstring,
+        missing-function-docstring,
+        missing-final-newline,
+        unrecognized-option,
+        useless-option-value,
+        import-outside-toplevel,
+        consider-using-f-string,
+        protected-access,
+        no-member,
+        fixme,
+        invalid-str-returned,
+        line-too-long,
+        ungrouped-imports
+
+
+
+ignore-paths=^.*/app/configurations/migrations\/.*$,
+             ^.*/app/core/migrations\/.*$,
+             ^.*/app/core/models\/.*$,
+             ^.*/app/xds_api/migrations\/.*$,
+             ^.*/app/configurations/tests\/.*$,
+             ^.*/app/configurations/models\/.*$
+             ^.*/app/es_api/migrations\/.*$,
+             ^.*/app/users/migrations\/.*$,
+             ^.*/app/es_api/migrations\/.*$,
+             ^.*\.cache\/*\/.*$
+
+init-hook="from pylint.config import find_pylintrc; import os, sys; sys.path.append(os.path.dirname(find_pylintrc()))"
+
+[MESSAGES CONTROL]
+
+[FORMAT]
+max-line-length=100

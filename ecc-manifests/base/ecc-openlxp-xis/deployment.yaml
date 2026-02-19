@@ -1,0 +1,346 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-openlxp-xis
+spec:
+  strategy:
+    type: Recreate
+  template:
+    spec:
+      securityContext:
+        fsGroup: 1001
+      terminationGracePeriodSeconds: 15
+      imagePullSecrets:
+      - name: code-il2-pull-creds
+      containers:
+      - name: ecc-openlxp-xis
+        image: ecc/ecc-openlxp-xis
+        resources:
+          limits:
+            memory: 512Mi
+        volumeMounts:
+          - mountPath: "/tmp/shared/"
+            name: xis-storage-mount
+        command:
+        - "/bin/sh"
+        - "-exc"
+        - |
+          sed -i 's/hashlib.md5()/hashlib.md5(usedforsecurity=False)/g' /tmp/app/.cache/python-packages/django/db/backends/utils.py
+          sed -i 's/DEBUG = False/DEBUG = True/g' ./openlxp_xis_project/settings.py
+          ../start-app.sh
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: app-vars
+        - secretRef:
+            name: mysql-connect-info
+        - secretRef:
+            name: xis-secrets
+        - configMapRef:
+            name: cluster-prefix
+        - secretRef:
+            name: p1ps-secrets
+        env:
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: mysql-connect-info
+              key: MYSQL_HOST
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: MYSQL_DB_ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: MYSQL_DB_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_RW_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_USER_1
+        - name: MYSQL_DB_RW_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_PASSWORD_1
+        - name: MYSQL_DB_RO_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_USER_1
+        - name: MYSQL_DB_RO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_PASSWORD_1
+        - name: P1PS_BASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_BASE_URL
+        - name: P1PS_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_AUTH_TOKEN
+        - name: P1PS_TEAM_ID
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_TEAM_ID
+        - name: CELERY_BROKER_URL
+          value: "redis://redis-xis:6379"
+        - name: CELERY_RESULT_BACKEND
+          value: "django-db"
+        - name: FORCE_SCRIPT_NAME
+          value: "/ecc-openlxp-xis"       
+      - name: xis-celery-worker
+        image: ecc/ecc-openlxp-xis
+        resources:
+          limits:
+            memory: 512Mi
+        command: ["celery", "-A", "openlxp_xis_project", "worker", "-l", "info", "--pool=solo"]
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: app-vars
+        - secretRef:
+            name: mysql-connect-info
+        - secretRef:
+            name: xis-secrets
+        - configMapRef:
+            name: cluster-prefix
+        - secretRef:
+            name: p1ps-secrets
+        env:
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: mysql-connect-info
+              key: MYSQL_HOST
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: MYSQL_DB_ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: MYSQL_DB_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_RW_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_USER_1
+        - name: MYSQL_DB_RW_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_PASSWORD_1
+        - name: MYSQL_DB_RO_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_USER_1
+        - name: MYSQL_DB_RO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_PASSWORD_1
+        - name: P1PS_BASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_BASE_URL
+        - name: P1PS_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_AUTH_TOKEN
+        - name: P1PS_TEAM_ID
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_TEAM_ID
+        - name: HOSTS
+          value: "ecc.apps.dso.mil"
+        - name: CSRF_COOKIE_DOMAIN
+          value: "https://ecc.staging.dso.mil"
+        - name: LOG_PATH
+          value: "/tmp/debug.log"
+        - name: FORCE_SCRIPT_NAME
+          value: "/ecc-openlxp-xis"
+        - name: CELERY_BROKER_URL
+          value: "redis://redis-xis:6379"
+        - name: CELERY_RESULT_BACKEND
+          value: "django-db"
+        - name: STYLE_SHA
+          value: "sha256-5McjkcKBpv3V8kAi271IT9NOk1/ZJcd3XNlAyrOGaOw="
+        - name: IMAGE_SHA
+          value: "sha256-0EZqoz+oBhx7gF4nvY2bSqoGyy4zLjNF+SDQXGp/ZrY="
+      - name: xis-celery-beat
+        image: ecc/ecc-openlxp-xis
+        command: ["celery", "-A", "openlxp_xis_project", "beat", "--scheduler", "django_celery_beat.schedulers:DatabaseScheduler" , "--loglevel=info", "--pidfile=/tmp/celerybeat.pid"]
+        imagePullPolicy: Always
+        envFrom:
+        - configMapRef:
+            name: app-vars
+        - secretRef:
+            name: mysql-connect-info
+        - secretRef:
+            name: xis-secrets
+        - configMapRef:
+            name: cluster-prefix
+        - secretRef:
+            name: p1ps-secrets
+        env:
+        - name: DB_HOST
+          valueFrom:
+            secretKeyRef:
+              name: mysql-connect-info
+              key: MYSQL_HOST
+        - name: DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: DB_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: DB_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_NAME
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_NAME_1
+        - name: MYSQL_DB_ADMIN_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_USER_1
+        - name: MYSQL_DB_ADMIN_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_ADMIN_PASSWORD_1
+        - name: MYSQL_DB_RW_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_USER_1
+        - name: MYSQL_DB_RW_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RW_PASSWORD_1
+        - name: MYSQL_DB_RO_USER
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_USER_1
+        - name: MYSQL_DB_RO_PASSWORD
+          valueFrom:
+            secretKeyRef:
+              name: mysql-db-credentials
+              key: MYSQL_DB_RO_PASSWORD_1
+        - name: P1PS_BASE_URL
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_BASE_URL
+        - name: P1PS_AUTH_TOKEN
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_AUTH_TOKEN
+        - name: P1PS_TEAM_ID
+          valueFrom:
+            secretKeyRef:
+              name: p1ps-secrets
+              key: P1PS_TEAM_ID
+        - name: HOSTS
+          value: "ecc.apps.dso.mil"
+        - name: CSRF_COOKIE_DOMAIN
+          value: "https://ecc.staging.dso.mil"
+        - name: LOG_PATH
+          value: "/tmp/debug.log"
+        - name: FORCE_SCRIPT_NAME
+          value: "/ecc-openlxp-xis"
+        - name: CELERY_BROKER_URL
+          value: "redis://redis-xis:6379"
+        - name: CELERY_RESULT_BACKEND
+          value: "django-db"
+        - name: STYLE_SHA
+          value: "sha256-5McjkcKBpv3V8kAi271IT9NOk1/ZJcd3XNlAyrOGaOw="
+        - name: IMAGE_SHA
+          value: "sha256-0EZqoz+oBhx7gF4nvY2bSqoGyy4zLjNF+SDQXGp/ZrY="
+      - name: redis
+        image: registry1.dso.mil/ironbank/opensource/redis/redis7:7.4.6
+      - name: xis-nginx
+        image: nginx/nginx
+        ports: 
+          - containerPort: 8080
+            name: xis-nginx-port
+        volumeMounts:
+          - mountPath: "/usr/share/nginx/html"
+            name: xis-storage-mount
+          - mountPath: /etc/nginx/conf.d/
+            name: nginx-default
+      volumes:
+        - name: xis-storage-mount
+          persistentVolumeClaim:
+            claimName: xis-storage-claim
+        - name: nginx-default
+          configMap:
+            name: xis-nginx-default-config
+

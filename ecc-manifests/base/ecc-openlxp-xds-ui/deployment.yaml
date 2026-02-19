@@ -1,0 +1,13 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ecc-openlxp-xds-ui
+spec:
+  template:
+    spec:
+      containers:
+      - name: ecc-openlxp-xds-ui
+        image: ecc/ecc-openlxp-xds-ui
+        imagePullPolicy: Always
+        env:
+          

@@ -1,0 +1,210 @@
+3637d7a | cscholer591 | 2026-02-06 | custom image replaced with ironbank image
+8fdc2d9 | Simeranjeet Sandhu | 2025-09-04 | Upgraded python to 3.13
+2bfc3c8 | Simeranjeet Sandhu | 2025-09-04 | Upgraded setuptools/boto3
+3630821 | JDTobin | 2025-07-23 | remove logging
+26cc6be | JDTobin | 2025-07-22 | update xis connection key length limit
+85e6ee4 | Simeranjeet Sandhu | 2025-06-30 | Upgraded Django/requests
+ac5699f | Simeranjeet Sandhu | 2025-05-13 | Cypress: Updated config base URL
+012ccb9 | James Tobin | 2025-05-12 | update deps
+9625414 | JDTobin | 2025-04-28 | update xis connection
+02bc100 | JDTobin | 2025-04-24 | add log
+169d8ec | JDTobin | 2025-04-24 | add logging to check auth header being sent
+de25f26 | JDTobin | 2025-04-22 | update deps
+8f7590f | JDTobin | 2025-04-22 | update deps
+6c3472a | JDTobin | 2025-04-22 | remove static and update cp command to always overwrite static files
+779aec6 | Michael Son | 2025-01-23 | Merge branch 'update-django' into 'master'
+96d3b96 | Michael Son | 2025-01-23 | update django to 4.2.18
+3d6b80b | JDTobin | 2024-12-24 | update validate api
+a2919f7 | James Tobin | 2024-12-24 | add media path
+b525a1f | James Tobin | 2024-12-20 | Update settings.py
+5d9e130 | Zachary Youngs | 2024-12-02 | Update test_views_unit.py
+56607bd | James Tobin | 2024-10-28 | Update requirements.txt
+0b81da0 | Simeranjeet Sandhu | 2024-10-15 | Adding STYLE_SHA/IMAGE_SHA
+3569040 | Simeranjeet Sandhu | 2024-10-14 | changes images/ to /media
+2fba74e | Simeranjeet Sandhu | 2024-10-14 | adding fixtures dir/
+fce9b7a | Simeranjeet Sandhu | 2024-10-14 | Added IMG_DATA_VALUE to CSP
+02451b2 | Simeranjeet Sandhu | 2024-10-14 | Added admin_interface/colorfied to INSTALLED_APPS
+9d978c9 | Simeranjeet Sandhu | 2024-10-11 | start-app: changed path from /media/ to /images/
+364f398 | Simeranjeet Sandhu | 2024-10-11 | Updating django UI
+7306690 | Simeranjeet Sandhu | 2024-10-02 | settings.py - Fixing fortify findings
+83b4c94 | Simeranjeet Sandhu | 2024-09-24 | Updated README
+e6b0123 | Simeranjeet Sandhu | 2024-09-24 | Updated README
+27c606e | Simeranjeet Sandhu | 2024-09-24 | Updated README
+33a56a3 | Jon Smith | 2024-08-20 | P1MDOHD-23732: update to latest base image
+a5b1276 | Simeranjeet Sandhu | 2024-08-13 | Django upgraded to 4.2.15
+ade835f | Simeranjeet Sandhu | 2024-07-29 | modified start-app script
+585c12f | Simeranjeet Sandhu | 2024-07-23 | Upgrading Django/django-rest-framework
+50952f9 | ssandhu | 2024-06-21 | DEBUG disabled
+0b93894 | ssandhu | 2024-06-19 | Updated gunicorn/pillow
+f01747f | ssandhu | 2024-06-19 | Fixed p1 authentication issue
+d02fece | Simeranjeet Sandhu | 2024-06-17 | Merge branch 'xms-update' into 'master'
+4918b8f | Simeranjeet Sandhu | 2024-06-13 | Enabling Debug
+f6a9c85 | Simeranjeet Sandhu | 2024-06-13 | Merge branch 'xms-update' into 'master'
+bc04d76 | Simeranjeet Sandhu | 2024-06-12 | disabling email/adding skip checks in start-app
+cd0f27b | Simeranjeet Sandhu | 2024-06-12 | Disabling debug
+03b266d | Simeranjeet Sandhu | 2024-06-12 | requests package updated due to bug
+3cccade | Simeranjeet Sandhu | 2024-06-12 | Turning on debug
+43c25e9 | Simeranjeet Sandhu | 2024-06-11 | migrate options
+b71bae9 | Simeranjeet Sandhu | 2024-06-11 | Merge branch 'xms-update' into 'master'
+2e024ac | Simeranjeet Sandhu | 2024-06-11 | updated p1-auth version
+a1a2702 | Simeranjeet Sandhu | 2024-06-11 | Merge branch 'xms-update' into 'master'
+f71c0b7 | Simeranjeet Sandhu | 2024-06-11 | added --skip-checks to start up script
+2606a59 | Simeranjeet Sandhu | 2024-06-10 | Merge branch 'xms-update' into 'master'
+f71f2b6 | Simeranjeet Sandhu | 2024-06-10 | Uncommented python lines - Dockerfile
+229e4cb | Simeranjeet Sandhu | 2024-06-10 | Merge branch 'xms-update' into 'master'
+b80b977 | Simeranjeet Sandhu | 2024-06-10 | Removed root user from Dockerfile
+ed54e74 | Simeranjeet Sandhu | 2024-06-10 | Merge branch 'xms-update' into 'master'
+a036cf0 | Simeranjeet Sandhu | 2024-06-10 | Updated Base Image
+b838dd8 | Simeranjeet Sandhu | 2024-06-04 | Merge branch 'xms-update' into 'master'
+72072ab | Simeranjeet Sandhu | 2024-06-04 | upgraded requests package
+ce8fd5c | James Tobin | 2024-06-03 | Merge branch 'swap-auth' into 'master'
+6c9b0df | JDTobin | 2024-06-03 | remove url mapping
+d54ee8e | James Tobin | 2024-06-03 | Merge branch 'swap-auth' into 'master'
+16f6c74 | JDTobin | 2024-06-03 | swap  authentication packages
+c1b6ff2 | Simeranjeet Sandhu | 2024-02-14 | Merge branch 'twistlock' into 'master'
+d53f3b3 | Simeranjeet Sandhu | 2024-02-14 | Twistlock: Upgrading pillow to 10.2.0
+66cf5bf | Simeranjeet Sandhu | 2024-02-14 | Twistlock: Upgrading pillow to 10.2.0
+63f886c | Simeranjeet Sandhu | 2024-01-19 | Merge branch 'cypress-tests' into 'master'
+8b94c29 | Simeranjeet Sandhu | 2024-01-19 | Adding cypress tests
+7b0fcd2 | Simeranjeet Sandhu | 2024-01-09 | Merge branch 'mdo/test' into 'master'
+91cbd81 | Jon Smith | 2024-01-05 | P1MDOHD-19775: update to latest custom base image
+031d60d | Simeranjeet Sandhu | 2023-11-20 | Merge branch 'mdo/test' into 'master'
+8d9b79f | Jon Smith | 2023-11-16 | P1MDOHD-18873: update to latest base image
+629c382 | Simeranjeet Sandhu | 2023-11-13 | Merge branch 'p1-updates' into 'master'
+a0d4b23 | Simeranjeet Sandhu | 2023-11-13 | Upgraded Django/Pillow
+b2c2188 | Simeranjeet Sandhu | 2023-09-07 | Merge branch 'p1-updates' into 'master'
+054fab5 | Simeranjeet Sandhu | 2023-09-07 | upgraded django to 3.2.21
+84343b3 | hsmith-adl | 2023-08-14 | Fixed formatting in the ReadMe
+0e79bda | hsmith-adl | 2023-08-14 | updated the ECC XMS ReadMe and Security Documentation
+cc68de6 | Simeranjeet Sandhu | 2023-07-27 | Merge branch 'twistlock' into 'master'
+1d36c7a | Simeranjeet Sandhu | 2023-07-27 | Updated python base image
+3a1613f | Simeranjeet Sandhu | 2023-07-25 | Merge branch 'twistlock' into 'master'
+782eb31 | Simeranjeet Sandhu | 2023-07-25 | requests version updated - twistlock
+971f4cc | Simeranjeet Sandhu | 2023-07-25 | Merge branch 'dep-check' into 'master'
+58fa511 | Simeranjeet Sandhu | 2023-07-25 | Removed django-ses
+ac624fa | Simeranjeet Sandhu | 2023-07-25 | Merge branch 'lint' into 'master'
+2ab6d24 | Simeranjeet Sandhu | 2023-07-25 | Fixed Lint
+a5fc182 | Karen Jijo | 2023-07-12 | Merge branch 'update_settings' into 'master'
+2e315e0 | Karen Jijo | 2023-07-12 | Added Requirements
+e5c1399 | Karen Jijo | 2023-07-11 | Added requiremtns
+eae09be | Karen Jijo | 2023-07-10 | Adding changes on seetings
+b08fb0c | James Tobin | 2023-05-19 | Merge branch 'migrate-gh' into 'master'
+f224dc8 | JDTobin | 2023-05-19 | remove unused var
+cd7e815 | James Tobin | 2023-05-19 | Merge branch 'migrate-gh' into 'master'
+e574cf5 | JDTobin | 2023-05-19 | add dep
+4fdbf8d | James Tobin | 2023-05-19 | Merge branch 'migrate-gh' into 'master'
+ac651ed | JDTobin | 2023-05-19 | migrates changes from GH adds support for xis search adds support for xis auth
+9ea4c7f | Simeranjeet Sandhu | 2023-05-08 | Merge branch 'xms-lint' into 'master'
+6f76e25 | ssandhu | 2023-05-08 | Fixed Lint
+dbecd35 | Simeranjeet Sandhu | 2023-05-08 | Merge branch 'xms-lint' into 'master'
+566c846 | ssandhu | 2023-05-08 | Fixed Lint
+452ae7f | James Tobin | 2023-05-04 | Merge branch 'update-db' into 'master'
+755674b | JDTobin | 2023-05-04 | update db package disable ssl for db communication
+a29086d | James Tobin | 2023-04-28 | Merge branch 'twistlock-update' into 'master'
+c12ed79 | JDTobin | 2023-04-28 | use ssl for db conn
+4fc5db5 | James Tobin | 2023-04-27 | Merge branch 'revert-c7b85bc4' into 'master'
+3231da2 | James Tobin | 2023-04-27 | Revert "Merge branch 'twistlock-update' into 'master'"
+c7b85bc | James Tobin | 2023-04-27 | Merge branch 'twistlock-update' into 'master'
+0708a2d | JDTobin | 2023-04-27 | update mysql connector
+b50221b | James Tobin | 2023-04-05 | Merge branch 'renovate/configure' into 'master'
+1e71798 | James Tobin | 2023-04-05 | rollback image
+80a3250 | Renovate Bot | 2023-04-01 | renovate: add renovate.json
+ec9ecfc | Simeranjeet Sandhu | 2023-03-23 | Merge branch 'p1-update' into 'master'
+3b8963f | ssandhu | 2023-03-23 | Python base image updated
+1aa53d5 | Simeranjeet Sandhu | 2023-03-23 | Merge branch 'p1-update' into 'master'
+d80730d | ssandhu | 2023-03-23 | Fixed Lint
+93b671f | Simeranjeet Sandhu | 2022-08-30 | Merge branch 'xms-code-update' into 'master'
+49c3111 | ssandhu | 2022-08-30 | twistlock files removed
+2b18814 | Simeranjeet Sandhu | 2022-08-30 | Merge branch 'xms-code-update' into 'master'
+0087f46 | ssandhu | 2022-08-30 | Modifications for ArgoCD
+851ae08 | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xms-code-update' into 'master'
+0555ef6 | ssandhu | 2022-08-04 | modified Dockerfile
+67ab67c | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xms-code-update' into 'master'
+ebacad9 | ssandhu | 2022-08-04 | Fortify fixed
+f0235d4 | Simeranjeet Sandhu | 2022-08-04 | Merge branch 'xms-code-update' into 'master'
+d09b3e7 | ssandhu | 2022-08-04 | Sonar issue fixed
+0322e1a | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xms-code-update' into 'master'
+1868ffb | ssandhu | 2022-08-03 | updated sonarqube issues
+b0f30f5 | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xms-code-update' into 'master'
+7909924 | ssandhu | 2022-08-03 | updated requirements.txt
+fe8f684 | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xms-code-update' into 'master'
+be7cfce | ssandhu | 2022-08-03 | updated requirements package version
+dba4a3c | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xms-code-update' into 'master'
+715e8d1 | ssandhu | 2022-08-02 | updated .pylintrc
+6d11e03 | Simeranjeet Sandhu | 2022-08-03 | Merge branch 'xms-code-update' into 'master'
+b3703d0 | ssandhu | 2022-08-02 | updated .pylintrc
+f69ca41 | Simeranjeet Sandhu | 2022-08-02 | Merge branch 'xms-code-update' into 'master'
+589c2b6 | ssandhu | 2022-08-02 | updated .pylintrc
+e30afa5 | Simeranjeet Sandhu | 2022-08-01 | Merge branch 'xms-code-update' into 'master'
+63835c2 | ssandhu | 2022-08-01 | updated .pylintrc
+4c66453 | Simeranjeet Sandhu | 2022-08-01 | Merge branch 'xms-code-update' into 'master'
+06cee7f | ssandhu | 2022-08-01 | updated .pylintrc
+cf251de | Simeranjeet Sandhu | 2022-07-29 | Merge branch 'xms-code-update' into 'master'
+4bb6d00 | ssandhu | 2022-07-29 | xms code update
+648e59d | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+1aec4ca | ssandhu | 2022-04-18 | updated requirements.txt
+a333bb4 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+fd21d19 | ssandhu | 2022-04-18 | updated Dockerfile
+6d75dc7 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+63bab07 | ssandhu | 2022-04-18 | updated Dockerfile
+aaa3102 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+dadf61d | ssandhu | 2022-04-18 | Sonarqube finding resolved
+d413823 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+c88f248 | ssandhu | 2022-04-18 | updated Dockerfile
+87f1eb8 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+42efacc | ssandhu | 2022-04-18 | Sonarqube findings resolved
+4258111 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+84488ea | ssandhu | 2022-04-18 | ssl disabled in settings.py
+089c1f5 | Simeranjeet Sandhu | 2022-04-18 | Merge branch 'xms-code-update' into 'master'
+8220d01 | ssandhu | 2022-04-18 | code update
+046626b | Simeranjeet Sandhu | 2022-04-16 | Merge branch 'xms-code-update' into 'master'
+4b4d28e | ssandhu | 2022-04-15 | updated views.py to meet Lint
+8181541 | Simeranjeet Sandhu | 2022-04-16 | Merge branch 'xms-code-update' into 'master'
+8a4f921 | ssandhu | 2022-04-15 | Sonarqube findings resolved
+04e31ef | Simeranjeet Sandhu | 2022-04-15 | Merge branch 'xms-code-update' into 'master'
+8c2ff34 | ssandhu | 2022-04-15 | Modified .pylintrc
+e493b3c | Simeranjeet Sandhu | 2022-04-15 | Merge branch 'xms-code-update' into 'master'
+3f0b82e | ssandhu | 2022-04-15 | Fixed ssl connection error
+446013d | Simeranjeet Sandhu | 2022-04-15 | Merge branch 'xms-code-update' into 'master'
+ed4fc42 | ssandhu | 2022-04-15 | xms code update
+e40ed53 | Simeranjeet Sandhu | 2022-04-15 | Merge branch 'xms-code-update' into 'master'
+ee4769d | ssandhu | 2022-04-15 | modified readme
+7d0c983 | Simeranjeet Sandhu | 2022-04-12 | Merge branch 'xms-code-update' into 'master'
+c558f23 | ssandhu | 2022-04-12 | Resolving Sonarqube findings
+d94bd36 | ssandhu | 2022-04-12 | resolving Sonarqube findings
+3ecec64 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xms-code-update' into 'master'
+e104eef | ssandhu | 2022-04-08 | moduleNotFound fixed
+0739973 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xms-code-update' into 'master'
+f18126c | ssandhu | 2022-04-08 | SSL connection error fixed
+d928796 | Simeranjeet Sandhu | 2022-04-08 | Merge branch 'xms-code-update' into 'master'
+4642d87 | ssandhu | 2022-04-08 | modified app/users/admin.py
+8bae1f1 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xms-code-update' into 'master'
+2dea372 | ssandhu | 2022-04-01 | updated .pylintrc
+f92da33 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xms-code-update' into 'master'
+072e516 | ssandhu | 2022-04-01 | openlxp-xms code updated to meet Lint requirements
+12e05c6 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xms-code-update' into 'master'
+ef13111 | ssandhu | 2022-04-01 | openlxp-xms code updated to meet Lint requirements
+dcc71f0 | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xms-code-update' into 'master'
+8fba5b0 | ssandhu | 2022-04-01 | openlxp-xms code updated to meet Lint requirements
+534b13e | Simeranjeet Sandhu | 2022-04-01 | Merge branch 'xms-code-update' into 'master'
+9f74d9c | ssandhu | 2022-04-01 | added .pylintrc
+dbb9520 | Simeranjeet Sandhu | 2022-03-18 | Merge branch 'xms-code-update' into 'master'
+aa7d487 | ssandhu | 2022-03-18 | updated Dockerfile
+ecd917b | Simeranjeet Sandhu | 2022-03-02 | Merge branch 'xms-code-update' into 'master'
+6285321 | ssandhu | 2022-03-02 | requirements.txt updated
+9b59061 | Simeranjeet Sandhu | 2022-02-25 | Merge branch 'xms-code-update' into 'master'
+1b6e494 | ssandhu | 2022-02-25 | code updated from github openlxp
+39f92ce | Simeranjeet Sandhu | 2022-02-07 | Update Dockerfile
+a7b8b70 | Simeranjeet Sandhu | 2022-02-04 | Update settings.py
+69cc416 | Simeranjeet Sandhu | 2022-02-04 | Update requirements.txt
+6605a3c | Simeranjeet Sandhu | 2022-02-01 | Update Dockerfile
+7b9e679 | Simeranjeet Sandhu | 2022-01-27 | Update Dockerfile /opt/ changed to /tmp/. Elevated permissions
+9111455 | Michael Son | 2022-01-19 | Update Dockerfile
+2c26caf | Michael Son | 2021-12-13 | Update Dockerfile
+f150ceb | Michael Son | 2021-11-03 | initial commit
+ad1a33c | jdiouf | 2021-08-02 | Feature/api app (#5)
+4c7b062 | KarenAJ | 2021-07-09 | Feature/conformance alerts (#4)
+cea7d10 | jdiouf | 2021-05-27 | Updated Docker Config + Added Configuration Model (#3)
+ee5b36e | schittlur | 2021-03-03 | project set up (#2)
+81dccbb | Matt Drayer | 2021-03-03 | Create LICENSE.txt (#1)
+ea9fe63 | Mike Son | 2020-11-30 | Initial commit
